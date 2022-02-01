@@ -53,10 +53,13 @@ template {
 a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
+  text-decoration: none;
+  color: lightslategray;
 }
 a:active,
 a:hover {
   outline-width: 0;
+  color: darkslategray;
 }
 abbr[title] {
   border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
@@ -594,4 +597,10 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+
+.post {
+  margin: 1rem 0;
+  padding: 0.5rem 0 1rem;
+  border-bottom: solid;
 }

@@ -1,7 +1,7 @@
 ---
-path: "/post-one"
-date: "2022-02-01"
-title: "My First Gatsby Post"
+path: "/post-four"
+date: "2022-02-04"
+title: "My 4th Gatsby Post"
 author: "John Doe"
 image: "image.jpg"
 ---

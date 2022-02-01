@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `My Gatsby Blog`,
-    description: `This is a simple blow site made on GatsbyJS.`,
+    description: `This is a simple blog site made on GatsbyJS.`,
     author: `@kenjifushida`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
@@ -16,7 +16,6 @@ module.exports = {
         path: `${__dirname}/src/pages`,
       },
     },
-    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -24,7 +23,22 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.md`, `.mdx`],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+            },
+          },
+        ],
+      },
+    },
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
